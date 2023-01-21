@@ -35,4 +35,14 @@ compwins=""
 #compwins is a variable that shows how many wins the user has.
 
 print("\n REMEMBER: \n 1. Tech beats Gers \n 2. Gers beats Rid \n 3. Rid beats Tech \n \n Choose wisely and have fun :)")
-
+ 
+userchoice=input("Choose Tech, Rid, or Gers: ")
+if userchoice=="Tech" or "tech":
+  user_choice= "Tech"
+  print("Your choice is Tech")
+elif userchoice=="Rid" or "rid":
+  user_choice= "Rid"
+elif userchoice=="Ger" or "ger":
+  user_choice="Ger"
+else:
+  print("Not a Valid Choice")
