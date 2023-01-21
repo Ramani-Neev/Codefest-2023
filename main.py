@@ -1,11 +1,12 @@
 import random
+#This 
 wrongpass = 0
 # A variable that stores the number of attempts you entered wrong 
-password = "Oak-cODEfest_2-3"
-#If you enter this password you can access the game.
-passasker = input("Enter the password for accessing the game ")
+password = "1234"
+#If you enter this password for accessing the game.
+passasker = input("Enter the password for accessing the game:- \n")
 #It is a variable that stores your input of the password.
-if passasker == "Oak-cODEfest_2-3":
+if passasker == "1234":
   print("Password Accepted")
 #This is an if statement that tells if the variable(passasker) == to the right password.
 
@@ -15,7 +16,7 @@ else:
   print("Access Denied")
   while wrongpass < 5:
     passasker = input("Try again: ")
-    if passasker == "Oak-cODEfest_2-3":
+    if passasker == "1234":
       print("Password Accepted")
     else:
       wrongpass = wrongpass + 1
@@ -31,10 +32,21 @@ else:
 if wrongpass == 5:
   print("Too many failed attempts :(")
   quit()
-print("\t\t\t\t\tTECHRIDGERS")
-playername = input("What is your name?: ")
-playerage = input("How old are you?:" )
-playerclass = input("What class you are in ")
+print("\t\t\t\t\tWELCOME-TO-TECHRIDGERS")
+print("\n\t\t\t\t\t\t ~SIGN IN~")
+playername = input("Choose your username ")
+playeremail = input("Enter your E-mail ")
+playerpassword = input("Type in your password")
+if int(playerage) > 3:
+  print("You are eligible to play this game")
+else:
+  print("You are too young to play :(")
+  quit()
+playerclass = input("What class you are in? ")
+playeremail = input("Please enter your E-mail ")
+
+
+  
 
 print("Hello", playername, "! Let's play a game!")
 
@@ -53,11 +65,20 @@ elif userchoice=="2":
   print("Your choice is Rid")
   user_choice= "Rid"
 elif userchoice=="3":
-  print("Your choice is Ger")
+  print("Your choice is Gers")
   user_choice="Ger"
 print("Now for the computers turn\n")
 compchoice=random.randint(1,3)
-if compchoice
+if compchoice == 1:
+  print("The computer chose Tech")
+  comp_choice="Tech"
+elif compchoice == 2:
+  print("The computer chose Rid")
+  comp_choice="Rid"
+elif compchoice == 3:
+  print("The computer chose Gers")
+  comp_choice="Gers"
+
 
 
 
