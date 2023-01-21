@@ -1,6 +1,5 @@
 import random
 #It is a ramdom library of functions we are calling.
-
 # This is so that later in this code, we can incorperate the random.randint function
 wrongpass = 0
 # A variable that stores the number of attempts you entered wrong
@@ -9,11 +8,11 @@ password = "1234"
 varhelp = 4
 comp_choice = ""
 user_choice = ""
-compchoice = ()
+compchoice = ()               
 userchoice = ()
 wrongpass = ()
 playerage = ()
-variable = ()
+variable = 2
 compwins = 0
 userwins = 0
 playerclass = ""
@@ -32,6 +31,15 @@ else:
 print("\t\t\t\t\tWELCOME-TO-TECHRIDGERS")
 # This is the heading tag and \t means tab.
 print("\n\t\t\t\t\t\t ~SIGN IN~\n")
+playeremail=input("Enter your oakridge email:-\n")
+playeremail1=playeremail[::-1]
+playeremail2=playeremail1[:11]
+if playeremail2=="ni.egdirkao":
+    print("Email Accepted")
+else:
+    print("Access Denied")
+    quit()
+
 playername = input("Create your username:-  \n")
 playerage = int(input("Specify your age:-  "))
 if int(playerage) > 5:
@@ -84,53 +92,43 @@ if comp_choice == "Tech" and user_choice == "Tech":
     print("It's a Draw!\n")
     userwins = userwins + 1
     compwins = compwins + 1
-    ur1 = 1
-    cr1 = 1
+
   #And if the userinput is greater than the computerinput it will add 1 Point and vice versa for the same.
 
 elif comp_choice == "Tech" and user_choice == "Rid":
   print(playername, " gained +1 Point\n")
   userwins = userwins + 1
-  ur1 = 1
 
 elif comp_choice == "Tech" and user_choice == "Gers":
   print("Bot gained +1 Point\n")
   compwins = compwins + 1
-  cr1 = 1
 
 elif comp_choice == "Rid" and user_choice == "Rid":
   print("It's a Draw!\n")
   userwins = userwins + 1
   compwins = compwins + 1
-  ur1 = 1
-  cr1 = 1
 
 elif comp_choice == "Rid" and user_choice == "Tech":
   print("Bot gained +1 Point\n")
   compwins = compwins + 1
-  cr1 = 1
 
 elif comp_choice == "Rid" and user_choice == "Gers":
   print(playername, " gained +1 Point\n")
   userwins = userwins + 1
-   ur1 = 1
 
 elif comp_choice == "Gers" and user_choice == "Tech":
   print(playername, " gained +1 Point\n")
   userwins = userwins + 1
-  ur1 = 1
 
 elif comp_choice == "Gers" and user_choice == "Rid":
   print("Bot gained +1 Point\n")
   compwins = compwins + 1
-  cr1 = 1
 
 elif comp_choice == "Gers" and user_choice == "Gers":
-  print("It's a Draw!\n")
+  print("-Tie-\n")
   userwins = userwins + 1
   compwins = compwins + 1
-   ur1 = 1
-   
+
 
 while userwins < 5 and compwins < 5:
   userchoice = int(input("Enter the next one you will choose...\n")) 
@@ -158,12 +156,12 @@ while userwins < 5 and compwins < 5:
     comp_choice = "Gers"
 
   if comp_choice == "Tech" and user_choice == "Tech":
-    print("It's a Draw!\n")
+    print("-Tie-\n")
     userwins = userwins + 1
     compwins = compwins + 1
 
   elif comp_choice == "Tech" and user_choice == "Rid":
-    print("Player gained +1Point\n")
+    print(playername, "gained +1Point")
     userwins = userwins + 1
 
   elif comp_choice == "Tech" and user_choice == "Gers":
@@ -171,7 +169,7 @@ while userwins < 5 and compwins < 5:
     compwins = compwins + 1
 
   elif comp_choice == "Rid" and user_choice == "Rid":
-    print("It's a Draw!\n")
+    print("-Tie-\n")
     userwins = userwins + 1
     compwins = compwins + 1
 
@@ -184,7 +182,7 @@ while userwins < 5 and compwins < 5:
     compwins = compwins + 1
 
   elif comp_choice == "Gers" and user_choice == "Tech":
-    print("Player gained +1Point\n")
+    print(playername, " gained +1Point\n")
     userwins = userwins + 1
 
   elif comp_choice == "Gers" and user_choice == "Rid":
@@ -192,7 +190,7 @@ while userwins < 5 and compwins < 5:
     compwins = compwins + 1
 
   elif comp_choice == "Gers" and user_choice == "Gers":
-    print("It's a Draw!\n")
+    print("-Tie-\n")
     userwins = userwins + 1
     compwins = compwins + 1
 
@@ -203,6 +201,12 @@ print("\t\t\t\t\tComputer\t\t\t\tPlayer\n")
 print("Overall Score:- \t   ", compwins, "\t\t\t\t\t  ", userwins, "\n")
 print("_"*70)
 
-
+if userwins == compwins:
+  print("TIE!!")
+elif userwins > compwins:
+  print(playername, " WINS!!!")
+else:
+  print("--GAME OVER--")
+  print("Sorry, ", playername, "please try again.")
 
 #This is to make the scorecard of the player and computer after 5 rounds.
