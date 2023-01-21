@@ -87,5 +87,6 @@ elif compchoice == 3:
   print("The computer chose Gers")
   comp_choice="Gers"
 
-if comp_choice=="Tech" and user_choice
+if comp_choice=="Tech" and user_choice==Rid:
+  print("You Win")
 
