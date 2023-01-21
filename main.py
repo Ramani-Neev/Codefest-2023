@@ -24,8 +24,8 @@ else:
         print("Access Denied")
 
 if wrongpass == 5:
- quit()
-
+  print("Too many failed attempts :(")
+  quit()
 print("\t\t\t\t\tTECHRIDGERS")
 playername = input("What should we call you?: ")
 print("Hello", playername, "Let's play a game!")
@@ -35,3 +35,4 @@ compwins=""
 #compwins is a variable that shows how many wins the user has.
 
 print("\n REMEMBER: \n 1. Tech beats Gers \n 2. Gers beats Rid \n 3. Rid beats Tech \n \n Choose wisely and have fun :)")
+
