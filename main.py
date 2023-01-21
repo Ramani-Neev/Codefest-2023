@@ -1,5 +1,5 @@
 import random
-#This 
+#This is so that later in this code, we can incorperate the random.randint
 wrongpass = 0
 # A variable that stores the number of attempts you entered wrong 
 password = "1234"
@@ -18,6 +18,7 @@ else:
     passasker = input("Try again: ")
     if passasker == "1234":
       print("Password Accepted")
+#This else statement will tell if you get the password wrong, you will have the chance to try again for 4 more times.
     else:
       wrongpass = wrongpass + 1
       print("Access Denied")
@@ -34,16 +35,15 @@ if wrongpass == 5:
   quit()
 print("\t\t\t\t\tWELCOME-TO-TECHRIDGERS")
 print("\n\t\t\t\t\t\t ~SIGN IN~")
-playername = input("Choose your username ")
-playeremail = input("Enter your E-mail ")
-playerpassword = input("Type in your password")
+playername = input("Choose your username \n")
+playerage = input("Enter your age \n")
 if int(playerage) > 3:
-  print("You are eligible to play this game")
+  print("You are eligible to play this game\n")
 else:
   print("You are too young to play :(")
   quit()
-playerclass = input("What class you are in? ")
-playeremail = input("Please enter your E-mail ")
+playerclass = input("What class you are in? \n")
+playeremail = input("Please enter your E-mail \n")
 
 
   
