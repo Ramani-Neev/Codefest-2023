@@ -18,7 +18,7 @@ else:
       if passasker == "Oak-cODEfest_2-3":
         print("Password Accepted")
       else:
-        wrongpass = wrongpass + 2
+        wrongpass = wrongpass + 1
         print("Access Denied")
 
 
