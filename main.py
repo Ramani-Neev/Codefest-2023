@@ -21,7 +21,3 @@ else:
         wrongpass = wrongpass + 1
         print("Access Denied")
 
-
-
-
-
