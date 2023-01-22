@@ -3,7 +3,7 @@ import random
 # This is so that later in this code, we can incorperate the random.randint function
 wrongpass = 0
 # A variable that stores the number of attempts you entered wrong
-password = "1234"
+password = "cODEfEST2-3"
 # If you enter this password for accessing the game.
 varhelp = 4
 comp_choice = ""
@@ -19,7 +19,7 @@ playerclass = ""
 #Line 9 to 19 is all the variables we are going to use.
 passasker = input("Enter the security key to unlock the game:- \n")
 # It is a variable that stores your input of the password.
-if passasker == "1234":
+if passasker == "cODEfEST2-3":
     print("Password Accepted\n")
 # This is an if statement that tells if the variable(passasker) == to the right password.
 
@@ -214,6 +214,8 @@ elif userwins > compwins:
 else:
   print("--GAME OVER--")
   print("Sorry, ", playername, "please try again.")
+  quit()
+
 
 #This is to make the scorecard of the player and computer after 5 - 7 rounds.
 #
