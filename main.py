@@ -20,7 +20,7 @@ playerclass = ""
 passasker = input("Enter the security key to unlock the game:- \n")
 # It is a variable that stores your input of the password.
 if passasker == "1234":
-    print("Password Accepted")
+    print("Password Accepted\n")
 # This is an if statement that tells if the variable(passasker) == to the right password.
 
 else:
@@ -28,19 +28,20 @@ else:
     print("Access Denied")
     quit()
 
-print("\t\t\t\t\tWELCOME-TO-TECHRIDGERS")
+print("\t\t\t\t\t   WELCOME-TO-TECHRIDGERS")
 # This is the heading tag and \t means tab.
-print("\n\t\t\t\t\t\t ~SIGN IN~\n")
+print("\n\t\t\t\t\t\t\t ~SIGN IN~\n")
 playeremail=input("Enter your oakridge email:-\n")
 playeremail1=playeremail[::-1]
 playeremail2=playeremail1[:11]
 if playeremail2=="ni.egdirkao":
+#This variable basically verifies if you are a true Techridger and to identitify that you have to have oakridge.in in the last.
     print("Email Accepted")
 else:
     print("Access Denied")
     quit()
 
-playername = input("Create your username:-  \n")
+playername = input("Create your username (optional) :-  \n")
 playerage = int(input("Specify your age:-  "))
 if int(playerage) > 5:
     print(input("You are eligible. Press enter to continue..."))
@@ -50,7 +51,7 @@ else:
     quit()
   #Orelese it wil quit the game for you.
 
-playerclass = input("Your class and section:-  ")
+playerclass = input("Your class and section (optional) :-  ")
 
 print("\nHey", playername, "! Let's play a game!")
 
@@ -197,7 +198,8 @@ while userwins < 5 and compwins < 5:
   #We are using a wild loop for indicating that there will be 5 rounds and the while loop will repeat not more than 5 times.
 
 print("_"*70)
-print("\t\t\t\t\tComputer\t\t\t\tPlayer\n")
+print("\n")
+print("\t\t\t\t\tComputer\t\t\t\t",playername,"\n")
 print("Overall Score:- \t   ", compwins, "\t\t\t\t\t  ", userwins, "\n")
 print("_"*70)
 
@@ -205,8 +207,11 @@ if userwins == compwins:
   print("TIE!!")
 elif userwins > compwins:
   print(playername, " WINS!!!")
+  print("Thank You so much for playing the game")
+  print("Class:-  ", playerclass,"\nEmail:-  ", playeremail,"\nAge:-  ",playerage)
 else:
   print("--GAME OVER--")
   print("Sorry, ", playername, "please try again.")
 
-#This is to make the scorecard of the player and computer after 5 rounds.
+#This is to make the scorecard of the player and computer after 5 - 7 rounds.
+#
